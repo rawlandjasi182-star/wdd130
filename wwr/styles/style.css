@@ -1,0 +1,345 @@
+body {
+    background-color: #f4f9f4; /* soft greenish white */
+    font-family: 'Open Sans', Arial, sans-serif; /* body font with fallbacks */
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(34, 87, 122, 0.8); /* deep blue with transparency */
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-align: center;
+    display: inline-block; /* ensures text-align works for links */
+    color: #fcfbfb;
+    text-decoration: none;
+    padding: 35px;
+}
+
+nav a:hover {
+    background-color: #2e8b57; /* sea green */
+    color: #fff;
+}
+
+#hero-msg h1,
+#hero-msg h4 {
+    text-align: center;
+}
+
+/* Hero grid: image spans full grid, message sits in center column */
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -100px;
+}
+
+#hero-box {
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    position: relative;
+    z-index: -1;
+}
+
+#hero-msg {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 100px;
+}
+
+#hero-msg h4 {
+    color: #fff;
+}
+
+.button-box {
+    text-align: center;
+}
+
+main section {
+    text-align: center;
+}
+
+#background {
+    height: 725px;
+    background-color: #b3e5fc; /* light blue */
+}
+
+.msg {
+    background-color: #fffde7; /* soft yellow */
+    padding: 35px;
+}
+
+footer {
+    background-color: #263238; /* dark blue-grey */
+    color: #fff;
+    padding: 25px 50px;
+    margin-top: 200px;     /* keep or adjust as needed */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;       /* allows items to wrap on small screens */
+    gap: 16px;             /* small spacing between items */
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0 8px;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto; /* centers the content horizontally */
+}
+
+.book,
+.join {
+    background-color: #ff9800; /* vibrant orange */
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.book:hover,
+.join:hover {
+    background-color: #e65100; /* darker orange */
+    color: #fff;
+}
+
+.logo {
+    width: 80px;
+}
+
+.icon {
+    width: 80px;
+    padding-top: 10px;
+}
+
+#hero-img {
+    width: 100%;
+}
+
+.card-img {
+    border: 10px solid #ff9800; /* using the site's orange as border color */
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.card-img:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+main section img {
+    box-sizing: border-box;
+}
+
+/* Headline fonts for home-title and msg h2 */
+.home-title,
+.msg h2 {
+    font-family: 'Montserrat', 'Arial Black', sans-serif;
+    /* optional: font-weight: 700; */
+}
+
+.home-title {
+    font-size: 2em;ini
+}
+
+.home-title {
+    margin-top: 10px;
+}
+
+.book,
+.join {
+    font-size: 18px;
+}
+
+.book,
+.join {
+    margin-top: 50px;
+}
+
+.msg p {
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+
+.msg {
+    line-height: 1.5em;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+footer .social {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+footer .social img {
+    width: 32px;
+    height: auto;
+    display: block;
+    padding: 0; /* remove earlier top-padding if present */
+}
+
+h2 {
+    margin: 0;
+}
+
+.rivers-card,
+.camping-card,
+.rapids-card {
+    margin: 200px 0;
+        overflow: hidden;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+/* Main grid layout */
+main.home-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+/* Ensure images scale to their grid area */
+.card-img,
+.mountains {
+    width: 100%;
+}
+
+/* Place the cards */
+.rivers-card {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.camping-card {
+    grid-column: 5 / 7;
+    grid-row: 2 / 3;
+}
+
+.rapids-card {
+    grid-column: 8 / 10;
+    grid-row: 2 / 3;
+}
+
+/* Background block spans most of the grid */
+#background {
+    grid-column: 1 / 11;
+    grid-row: 4 / 9;
+}
+
+.mountains {
+    grid-column: 2 / 7;
+    grid-row: 5 / 8;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.msg {
+    grid-column: 6 / 10;
+    grid-row: 6 / 7;
+}
+
+/* Responsive: stack footer content on small screens */
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-top: 100px; /* reduce large top margin on small screens */
+    }
+
+    footer p {
+        padding: 8px 0;
+    }
+}
+
+/* Responsive adjustments for small and medium screens */
+@media screen and (max-width: 900px) {
+    /* Turn grids into blocks for linear flow */
+    #hero, main.home-grid {
+        display: block;
+        height: auto;
+    }
+
+    /* Stack nav and footer content vertically */
+    nav, footer {
+        flex-direction: column;
+    }
+
+    /* Make nav links full width and easier to tap */
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+
+    /* Remove hero overlap on smaller screens */
+    #hero {
+        margin-top: 0;
+    }
+    #hero-msg {
+        margin-top: 0;
+    }
+
+    /* Hide secondary hero text and restyle main headline */
+    #hero-msg h4 {
+        display: none;
+    }
+    #hero-msg h1 {
+        color: #6f7364;
+    }
+
+    .home-title {
+        font-size: 25px;
+    }
+
+    /* Make cards narrower and center them */
+    .rivers-card, .camping-card, .rapids-card {
+        margin: 50px auto;
+        width: 60%;
+    }
+
+    /* Hide decorative background on small screens */
+    #background {
+        display: none;
+    }
+
+    /* Make mountains and message stack and center */
+    .mountains, .msg {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Reduce footer spacing on mobile */
+    footer {
+        margin-top: 25px;
+    }
+}
+
