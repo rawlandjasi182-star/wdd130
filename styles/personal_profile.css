@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(99, 174, 197);
+    margin: 0px;
+
+}
+
+header {
+background-color: white;
+height: 50px;
+text-align: center;
+
+}
+main {
+    text-align: center;
+}
+    .container {
+        border: 1px solid white;
+        display: inline-block;
+
+}
+ 
+ul {
+    display: inline-block;
+    margin: 5px;
+}
+
+.container{
+    padding: 10px;
+}
